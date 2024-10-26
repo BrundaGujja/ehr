@@ -1,0 +1,9 @@
+.loginbox input[type="date"], 
+.loginbox input[name="age"] {
+    color: black !important;
+    background-color: transparent;
+}
+
+.loginbox input[type="date"]::-webkit-calendar-picker-indicator {
+    background: black; 
+}

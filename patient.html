@@ -1,0 +1,353 @@
+<html>
+<head>
+    <title>PATIENT SIGNUP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+          crossorigin="anonymous">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> 
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/129-512.png" 
+             class="avatar">
+        <h1>PATIENT LOGIN</h1>
+        
+        <form action='/patcreate' method="POST">
+            <p>FIRST NAME</p>
+<input type="text" name="usr" class="name-input" placeholder="FIRST NAME" required>
+
+<p>LAST NAME</p>
+<input type="text" name="lsn" class="name-input" placeholder="LAST NAME">
+
+            <p>GENDER</p>
+            <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            </select>
+
+
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="PASSWORD" required>
+
+            <p>AGE</p>
+            <input type="number" name="age" placeholder="AGE" required>
+
+            <p>ADDRESS</p>
+            <input type="text" name="addres" placeholder="ADDRESS">
+
+            <div class="form-group">
+                <label for="country">COUNTRY</label><br>
+                <select name="country" class="countries order-alpha presel-IN" id="countryId">
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">STATE</label><br>
+                    <select name="state" class="states order-alpha" id="stateId">
+                        <option value="">Select State</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Other">Other</option>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">CITY</label><br>
+                    <select name="city" class="cities order-alpha" id="cityId">
+                        <option value="">Select City</option>
+                        <!-- Andhra Pradesh -->
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Vijayawada">Vijayawada</option>
+                        <option value="Guntur">Guntur</option>
+                        
+                        <!-- Assam -->
+                        <option value="Guwahati">Guwahati</option>
+                        <option value="Silchar">Silchar</option>
+                    
+                        <!-- Bihar -->
+                        <option value="Patna">Patna</option>
+                        <option value="Gaya">Gaya</option>
+                    
+                        <!-- Chandigarh -->
+                        <option value="Chandigarh">Chandigarh</option>
+                    
+                        <!-- Chhattisgarh -->
+                        <option value="Raipur">Raipur</option>
+                        <option value="Bhilai">Bhilai</option>
+                    
+                        <!-- Delhi -->
+                        <option value="New Delhi">New Delhi</option>
+                    
+                        <!-- Goa -->
+                        <option value="Panaji">Panaji</option>
+                        <option value="Vasco da Gama">Vasco da Gama</option>
+                    
+                        <!-- Gujarat -->
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Vadodara">Vadodara</option>
+                    
+                        <!-- Haryana -->
+                        <option value="Gurugram">Gurugram</option>
+                        <option value="Faridabad">Faridabad</option>
+                    
+                        <!-- Himachal Pradesh -->
+                        <option value="Shimla">Shimla</option>
+                        <option value="Manali">Manali</option>
+                    
+                        <!-- Jammu and Kashmir -->
+                        <option value="Srinagar">Srinagar</option>
+                        <option value="Jammu">Jammu</option>
+                    
+                        <!-- Jharkhand -->
+                        <option value="Ranchi">Ranchi</option>
+                        <option value="Jamshedpur">Jamshedpur</option>
+                    
+                        <!-- Karnataka -->
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Mysuru">Mysuru</option>
+                    
+                        <!-- Kerala -->
+                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                        <option value="Kochi">Kochi</option>
+                    
+                        <!-- Madhya Pradesh -->
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Indore">Indore</option>
+                    
+                        <!-- Maharashtra -->
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Nagpur">Nagpur</option>
+                    
+                        <!-- Manipur -->
+                        <option value="Imphal">Imphal</option>
+                    
+                        <!-- Meghalaya -->
+                        <option value="Shillong">Shillong</option>
+                    
+                        <!-- Odisha -->
+                        <option value="Bhubaneswar">Bhubaneswar</option>
+                        <option value="Cuttack">Cuttack</option>
+                    
+                        <!-- Punjab -->
+                        <option value="Amritsar">Amritsar</option>
+                        <option value="Ludhiana">Ludhiana</option>
+                    
+                        <!-- Rajasthan -->
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Udaipur">Udaipur</option>
+                    
+                        <!-- Tamil Nadu -->
+                        <option value="Chennai">Chennai</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                    
+                        <!-- Telangana -->
+                        <option value="Hyderabad">Hyderabad</option>
+                    
+                        <!-- Uttar Pradesh -->
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Kanpur">Kanpur</option>
+                        <option value="Varanasi">Varanasi</option>
+                    
+                        <!-- Uttarakhand -->
+                        <option value="Dehradun">Dehradun</option>
+                        <option value="Haridwar">Haridwar</option>
+                    
+                        <!-- West Bengal -->
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Darjeeling">Darjeeling</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    
+                </select>
+            </div>
+
+            <p>PHONE</p>
+            <input type="text" name="ph" placeholder="CONTACT NUMBER">
+
+            <p>ENTER YOUR 12 DIGIT AADHAAR PIN</p>
+            <input type="text" name="Aadhar" placeholder="UNIQUE ID">
+
+            <p>ARE YOU CURRENTLY UNDER ANY MEDICATION?</p>
+            <input type="text" name="medication" placeholder="YES/NO">
+
+            <textarea name="message" rows="3" cols="50" placeholder="IF SO SPECIFY" id="text"></textarea><br><br>
+
+            <input type="submit" value="SIGN UP">
+        </form>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url("https://mcdn01.gittigidiyor.net/49845/498456623_0.jpg");
+        background-size: cover;
+        font-family: sans-serif;
+    }
+
+    .loginbox {
+        width: 470px;
+        height: 1100px;
+        background: #000;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+        margin-top: 350px;
+    }
+    .name-input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px; /* Ensures spacing is the same */
+    width: 100%; /* Ensures width consistency */
+}
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 50px);
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .loginbox p {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .loginbox input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .loginbox input[type="text"], 
+    input[type="password"], 
+    input[type="number"] {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .loginbox input[type="submit"] {
+        border: none;
+        outline: none;
+        height: 40px;
+        background: green;
+        color: black;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+
+    .loginbox input[type="submit"]:hover {
+        cursor: pointer;
+        background: #ffc107;
+        color: green;
+    }
+
+    select {
+        width: 100%;
+        height: 40px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    select option {
+        background-color: #333;
+        color: #fff;
+    }
+
+    select:focus {
+        border: 1px solid #ffc107;
+    }
+</style>
+</html>
